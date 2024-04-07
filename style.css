@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Merriweather', serif;
-    background-color: #f9fafc;
+    background-color: #ebf2ff;
 }
 
 .navbar {
@@ -26,7 +26,7 @@ body {
     width: 100%;
 }
 
-.nav__item {
+.button__primary {
     background-image: linear-gradient(
         to right,
         #ff512f 0%,
@@ -40,10 +40,27 @@ body {
     font-weight: 600;
 }
 
-.nav__item:hover {
+.button__primary:hover {
     border: 2px solid #ff676f; 
     cursor: pointer;
     );
+}
+
+.container {
+    padding: 20px;
+}
+
+.hero__image__container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.hero__image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
 }
 
 @media (min-width: 768px) {
@@ -57,7 +74,7 @@ body {
     .navbar__brand {
         width: 150px;
     }
-    .nav__item {
+    .button__primary {
         padding: 10px 20px;
         font-size: 20px;
     }
