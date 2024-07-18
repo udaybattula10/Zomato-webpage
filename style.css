@@ -1,81 +1,207 @@
+/* Reset default browser styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
+  }
+  
+  /* Body styling */
+  body {
     font-family: 'Merriweather', serif;
     background-color: #ebf2ff;
-}
-
-.navbar {
+    line-height: 1.6;
+  }
+  
+  /* Navbar styling */
+  .navbar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    justify-content: space-between;
     background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.navbar__brand {
-    width: 100px;
-}
-
-.navbar__logo {
+    padding: 10px 20px;
+  }
+  
+  .navbar__brand {
+    width: 150px;
+  }
+  
+  .navbar__logo {
     width: 100%;
-}
-
-.button__primary {
+  }
+  
+  /* Button styling */
+  .button__primary {
     background-image: linear-gradient(
+      to right,
+      #ff512f 0%,
+      #dd2476 51%,
+      #ff512f 100%
+    );
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .button__primary:hover {
+    border: 2px solid #FF6767;
+    cursor: pointer;
+    background: #dd2476;
+  }
+  
+  /* Container styling */
+  .container {
+    max-width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+  }
+  
+  .hero__image__container {
+    width: 100%;
+  }
+  
+  .hero__image {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+  
+  .hero__text {
+    font-weight: 800;
+    font-size: 30px;
+    margin: 20px 0;
+    color: #1d3557;
+  }
+  
+  .food__card__description {
+    padding: 15px;
+  }
+  
+  .food__card {
+    background-color: #F9F9F9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .food__card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .food__card__image__container {
+    width: 100%;
+  }
+  
+  .food__image {
+    border-radius: 8px 8px 0 0;
+    width: 100%;
+  }
+  
+  .explore__menu__text {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    color: #1d3557;
+  }
+  
+  /* Responsive styles for tablets and above */
+  @media (min-width: 768px) {
+    .explore__menu__lists {
+      margin-top: 45px;
+      display: flex;
+      gap: 15px;
+      padding: 0 30px;
+    }
+  
+    .explore__menu__container {
+      position: relative;
+    }
+  
+    .explore__menu__gradient__bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(
         to right,
         #ff512f 0%,
         #dd2476 51%,
         #ff512f 100%
-    );
-    color: #fff;
-    border: none;
-    padding: 12px;
-    border-radius: 6px;
-    font-weight: 600;
-}
-
-.button__primary:hover {
-    border: 2px solid #ff676f; 
-    cursor: pointer;
-    );
-}
-
-.container {
-    padding: 20px;
-}
-
-.hero__image__container {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-    width: 100%;
-}
-
-.hero__image {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-}
-
-@media (min-width: 768px) {
+      );
+      z-index: -3;
+      transform: skewY(-5deg);
+    }
+  
+    #pizza__card {
+      margin-top: -20px;
+      margin-bottom: 30px;
+    }
+  
     .navbar {
-        justify-content: space-between;
-        padding: 10px 30px;
+      padding: 10px 30px;
     }
-}   
-
-@media (min-width: 1024px) {
+  
+    .hero__container {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+    }
+  }
+  
+  /* Responsive styles for desktops and above */
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 70%;
+    }
+  
+    .explore__menu__lists {
+      gap: 25px;
+    }
+  
     .navbar__brand {
-        width: 150px;
+      width: 150px;
     }
+  
     .button__primary {
-        padding: 10px 20px;
-        font-size: 20px;
+      padding: 20px;
+      font-size: 20px;
     }
-}
+  
+    .hero__description {
+      width: 100%;
+    }
+  
+    .hero__text {
+      font-size: 50px;
+    }
+  
+    .explore__menu__text {
+      font-size: 48px;
+    }
+  }
+  
+  /* Utility classes for margin and padding */
+  .mt-30 {
+    margin-top: 30px;
+  }
+  
+  .mb-20 {
+    margin-bottom: 20px;
+  }
+  
+  .p-15 {
+    padding: 15px;
+  }
+  
+  .px-20 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
